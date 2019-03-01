@@ -1,4 +1,4 @@
-# popidex
+# Popigram
 
 ## Project setup
 ```

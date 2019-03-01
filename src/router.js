@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from './views/Home.vue';
+import CreatePost from './views/CreatePost.vue';
+import PostList from './views/PostList.vue';
+import ShowPost from './views/ShowPost.vue';
 
 Vue.use(Router);
 
@@ -10,16 +12,19 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home,
+      name: 'post-list',
+      component: PostList,
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
+      path: '/post/create',
+      name: 'post-create',
+      component: CreatePost,
+    },
+    {
+      path: '/post/:id',
+      name: 'post-show',
+      component: ShowPost,
+      props: true,
     },
   ],
 });
