@@ -3,7 +3,7 @@
     <div class="card-header">
       <i class="fas fa-user-circle"></i><strong class="ml-3 mt-2">Sofia Duran</strong>
     </div>
-    <img src="https://i.pinimg.com/originals/99/b9/4a/99b94a97599ec1b1fe71558dc6cef21b.jpg" class="card-img-top img-fluid" alt="...">
+    <img src="https://i.pinimg.com/originals/99/b9/4a/99b94a97599ec1b1fe71558dc6cef21b.jpg" class="card-img-top img-fluid" alt="user post">
     <div class="card-body">
       <p class="card-text"><strong>Sofia Duran</strong> Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       <div class="row">
@@ -31,30 +31,32 @@
 <style scoped>
   @media (min-width: 576px) { 
     div.card {
-      width: 20rem;
+      width: 28rem;
+    }
+  }
+
+  @media (min-width: 700px) { 
+    div.card {
+      width: 61rem;
     }
   }
 
   /* // Medium devices (tablets, 768px and up) */
   @media (min-width: 768px) { 
     div.card {
-      width: 32rem;
+      width: 61rem;
     }
   }
 
   /* // Large devices (desktops, 992px and up) */
   @media (min-width: 992px) { 
     div.card {
-      width: 45rem;
+      width: 61.6rem;
     }
   }
 
   /* // Extra large devices (large desktops, 1200px and up) */
   @media (min-width: 1300px) { 
-    section.container {
-      margin-top: 9rem !important;
-    }
-    
     div.card {
       width: 61.6rem;
     }
