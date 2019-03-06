@@ -1,6 +1,6 @@
 <template>
   <div>
-   <nav class="navbar navbar-expand-lg navbar-dark justify-content-between justify-content-xl-around py-3">
+   <nav class="navbar fixed-top navbar-expand-lg navbar-dark justify-content-between justify-content-xl-around py-3">
       <router-link :to="{ name: 'post-list' }" class="brand zero">
         <i class="fab fa-instagram fa-lg mr-1"></i><span> | </span><span class="m-2">Popigram</span> 
       </router-link>
