@@ -18,23 +18,7 @@
           </div>
         </div>
       </div>
-      <div class="card">
-        <div class="card-header">
-          <i class="fas fa-user-circle"></i><strong class="ml-3 mt-2">Sofia Duran</strong>
-        </div>
-        <img src="https://i.pinimg.com/originals/99/b9/4a/99b94a97599ec1b1fe71558dc6cef21b.jpg" class="card-img-top img-fluid" alt="...">
-        <div class="card-body">
-          <p class="card-text"><strong>Sofia Duran</strong> Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <div class="row">
-            <div class="col-6">
-              <button class="btn btn-light btn-lg btn-block"><i class="fas fa-heart"></i></button>
-            </div>
-            <div class="col-6">
-              <button class="btn btn-light btn-lg btn-block"><i class="fas fa-comments"></i></button>
-            </div>
-          </div>
-        </div>
-      </div>
+      <BaseCard/>
     </div>
     <div class="ml-5 block d-none d-md-block fixed-rigth">
       <i class="fas fa-user-circle"></i> <strong class="ml-3">Sofia Duran</strong>
@@ -43,9 +27,13 @@
 </template>
 
 <script>
-export default {
+  import BaseCard from '@/components/BaseCard.vue';
 
-};
+  export default {
+    components: {
+      BaseCard
+    }
+  };
 </script>
 
 <style scoped>
@@ -117,7 +105,7 @@ export default {
     font-size: 1.3rem;
   }
 
-  button:hover, button:focus {
+  /* button:hover, button:focus {
     border-color: #E1306C;
     background-color: #fff;
     outline: 0;
@@ -126,7 +114,7 @@ export default {
   button {
     border: 1px solid lightgray;
     background-color: #fff;
-  }
+  } */
 
   i {
     color: #E1306C;

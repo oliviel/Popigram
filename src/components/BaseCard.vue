@@ -1,29 +1,87 @@
 <template>
-   <div class="card mb-4">
-      <div class="card-header">
-        <i class="fas fa-user-circle"></i><strong class="ml-3 mt-2">Sofia Duran</strong>
-      </div>
-      <img src="https://i.pinimg.com/originals/99/b9/4a/99b94a97599ec1b1fe71558dc6cef21b.jpg" class="card-img-top img-fluid" alt="...">
-      <div class="card-body">
-        <p class="card-text"><strong>Sofia Duran</strong> Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <div class="row">
-          <div class="col-6">
-            <button class="btn btn-light btn-lg btn-block"><i class="fas fa-heart"></i></button>
-          </div>
-          <div class="col-6">
-            <button class="btn btn-light btn-lg btn-block"><i class="fas fa-comments"></i></button>
-          </div>
+   <div class="card">
+    <div class="card-header">
+      <i class="fas fa-user-circle"></i><strong class="ml-3 mt-2">Sofia Duran</strong>
+    </div>
+    <img src="https://i.pinimg.com/originals/99/b9/4a/99b94a97599ec1b1fe71558dc6cef21b.jpg" class="card-img-top img-fluid" alt="...">
+    <div class="card-body">
+      <p class="card-text"><strong>Sofia Duran</strong> Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <div class="row">
+        <div class="col-6">
+          <BaseButton><i class="fas fa-heart"></i></BaseButton>
+        </div>
+        <div class="col-6">
+          <BaseButton><i class="fas fa-comments"></i></BaseButton>
         </div>
       </div>
     </div>
+  </div>
 </template>
 
 <script>
-export default {
+  import BaseButton from '@/components/BaseButton.vue';
 
-}
+  export default {
+    components: {
+      BaseButton
+    }
+  }
 </script>
 
-<style>
+<style scoped>
+  @media (min-width: 576px) { 
+    div.card {
+      width: 20rem;
+    }
+  }
 
+  /* // Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) { 
+    div.card {
+      width: 32rem;
+    }
+  }
+
+  /* // Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) { 
+    div.card {
+      width: 45rem;
+    }
+  }
+
+  /* // Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1300px) { 
+    section.container {
+      margin-top: 9rem !important;
+    }
+    
+    div.card {
+      width: 61.6rem;
+    }
+  }
+
+  div.card {
+    background-color: #fff;
+  }
+
+  div.card-header {
+    font-size: 1.3rem;
+  }
+
+  div.card-header i {
+    position: relative;
+    font-size: 2.5rem;
+  }
+
+  div.card-header strong {
+    position: absolute;
+  }
+
+  p.card-text {
+    font-size: 1.3rem;
+  }
+
+  i {
+    color: #E1306C;
+  }  
 </style>
