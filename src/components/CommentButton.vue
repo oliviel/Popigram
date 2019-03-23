@@ -1,10 +1,17 @@
 <template>
-  <button class="btn btn-light btn-lg btn-block"><slot></slot></button>
+  <button class="btn btn-light btn-lg btn-block" @click="incremementLike">
+    <i class="fas fa-comments" slot="text"></i> {{ postComments }}
+  </button>
 </template>
 
 <script>
 export default {
-
+  props: {
+    postComments: {
+      type: Number,
+      required: true,
+    },
+  },
 }
 </script>
 
@@ -26,5 +33,13 @@ export default {
     border: 1px solid lightgray;
     background-color: #fff;
   }
+
+  p.card-text {
+    font-size: 1.3rem;
+  }
+
+  i {
+    color: #E1306C;
+  }  
 
 </style>

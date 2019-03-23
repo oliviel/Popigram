@@ -2,9 +2,8 @@
   <section class="container d-flex justify-content-center">
     <div class="align-items-center">
       <div class="mb-4">
-        <BaseCard/>    
+        <Card/>    
       </div>
-      <BaseCard/>
     </div>
     <div class="ml-5 block d-none d-lg-block fixed-rigth">
       <i class="fas fa-user-circle"></i> <strong class="ml-3">Sofia Duran</strong>
@@ -13,12 +12,12 @@
 </template>
 
 <script>
-  import BaseCard from '@/components/BaseCard.vue';
+  import Card from '@/components/Card.vue';
 
   export default {
     components: {
-      BaseCard
-    }
+      Card
+    },
   };
 </script>
 

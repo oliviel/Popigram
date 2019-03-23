@@ -5,13 +5,13 @@
     </div>
     <img src="https://i.pinimg.com/originals/99/b9/4a/99b94a97599ec1b1fe71558dc6cef21b.jpg" class="card-img-top img-fluid" alt="user post">
     <div class="card-body">
-      <p class="card-text"><strong>Sofia Duran</strong> Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <p class="card-text"><strong>Sofia Duran</strong> Some quick example text to build on the card title and make up the bulk of the card's content</p>
       <div class="row">
         <div class="col-6">
-          <BaseButton><i class="fas fa-heart"></i></BaseButton>
+          <LikeButton  @likeWasIncremented="likes = $event" :postLikes="likes"></LikeButton>
         </div>
         <div class="col-6">
-          <BaseButton><i class="fas fa-comments"></i></BaseButton>
+          <CommentButton :postComments="commnets"></CommentButton>
         </div>
       </div>
     </div>
@@ -19,12 +19,20 @@
 </template>
 
 <script>
-  import BaseButton from '@/components/BaseButton.vue';
+  import LikeButton from '@/components/LikeButton.vue';
+  import CommentButton from '@/components/CommentButton.vue';
 
   export default {
+     data() {
+      return {
+        likes: 0,
+        commnets: 10,
+      }
+    },
     components: {
-      BaseButton
-    }
+      LikeButton,
+      CommentButton,
+    },
   }
 </script>
 
@@ -83,7 +91,4 @@
     font-size: 1.3rem;
   }
 
-  i {
-    color: #E1306C;
-  }  
 </style>
